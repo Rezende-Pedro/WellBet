@@ -39,10 +39,12 @@ header{
 }
 
 h2{
+    font-size: 40px;
     margin-bottom: 30px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Jaini Purva";
+    font-weight: normal ;
     color: white;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .cards-grid {
@@ -91,10 +93,12 @@ h2{
 }
 
 .top-card{
+    font-family: "Iosevka Charon";
     margin-top: 15px;
     font-size: 25px;
 }
 .day{
+    font-family: "Iosevka Charon";
     margin-top: 5px;
     font-size: 15px;
 }
@@ -110,10 +114,15 @@ h2{
     margin-top: 30px;
     width: 40%;
     height: 40px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    cursor: pointer;
 }
 
 .btn-palpite{
-    font-size: 20px;
+    font-family: "Iosevka Charon";
+    font-size: 30px;
     border: none;
     border-radius: 20px;
     height: 40px;
