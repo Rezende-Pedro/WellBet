@@ -10,25 +10,32 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
 }
-body{
+body {
     background-color: var(--color-backgroud1);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header{
     display: flex;
     background-color: var(--color-1);
     align-items: center;
-    padding: 20px;
+    padding: 25px;
     height: 90px;
 }
 #logo{
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Righteous', cursive;
+    font-size: 36px;
+    color: black;
 }
 
+
 #content{
-    padding: 0px 5%;
+    padding: 0px 5% ;   
+    flex:1;
+    
 }
 
 h2{
@@ -39,18 +46,43 @@ h2{
 }
 
 .cards-grid {
+    flex: 1;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 150px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
     margin-top: 20px;
+}
+
+.card{
+    display: flex;
+}
+
+/* O "pulo do gato": empurra o 1º card (ímpar) para a esquerda */
+.card:nth-child(odd) {
+    justify-content: flex-start;
+}
+
+/* Empurra o 2º card (par) para a direita */
+.card:nth-child(even) {
+    justify-content: flex-end;
+}
+
+/* Em telas menores (quando um card cair para a linha de baixo), centralizamos os dois */
+@media (max-width: 800px) {
+    .card:nth-child(odd),
+    .card:nth-child(even) {
+        justify-content: center;
+    }
 }
 
 .card-palpite {
     border-radius: 20px;
     width: 100%;
-    height: 300px;
+    max-width: 500px;
+    height: 240px;
     background-color: var(--color-card);
     overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
 }
 
 .card-content{
@@ -75,7 +107,7 @@ h2{
 }
 
 .palpite{
-    margin-top: 80px;
+    margin-top: 30px;
     width: 40%;
     height: 40px;
 }
@@ -86,16 +118,28 @@ h2{
     border-radius: 20px;
     height: 40px;
     background-color: var(--color-1);
-    margin-top: 50px;
+    margin-top: 40px;
     width: 50%;
+    cursor: pointer;
+}
+
+.btn-palpite:hover{
+    background: #b2b201;
+    transform: scale(1.1);
 }
 
 footer{
-    height: 100px;
+    height: 120px;
     background-color: var(--color-footer);
     color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 #copy{
+    font-family: 'Righteous', cursive;
     font-size: 20px;
 }
