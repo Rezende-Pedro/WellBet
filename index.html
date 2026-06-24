@@ -28,11 +28,11 @@
                     <p class="top-card">Brasil VS Haiti</p>
                     <p class="day">19/06 - 21:00</p>
                     <div class="bet">
-                        <input class="palpite" type="number" min="1">
-                        <input class="palpite" type="number" min="1">
+                        <input class="palpite" type="number" min="1" id="time1-1">
+                        <input class="palpite" type="number" min="1" id="time1-2">
                     </div>
                     
-                    <a href="#"><button class="btn-palpite">PALPITE</button></a>
+                    <button onclick="salvarPalpite('Brasil vs Haiti',1)" class="btn-palpite">PALPITE</button>
                 </article>
             </div>
         </section>
@@ -43,10 +43,10 @@
                     <p class="top-card">Holanda VS Japão</p>
                     <p class="day">15/06 - 16:00</p>
                     <div class="bet">
-                        <input class="palpite" type="number" min="1" max="10">
-                        <input class="palpite" type="number" min="1" max="10">
+                        <input class="palpite" type="number" min="1" max="10" id="time2-1">
+                        <input class="palpite" type="number" min="1" max="10" id="time2-2">
                     </div>
-                    <p><button class="btn-palpite">PALPITE</button></p>
+                    <button onclick="salvarPalpite('Holanda vs Japão',2)" class="btn-palpite">PALPITE</button>
                 </article>
             </div>
         </section>
@@ -58,5 +58,8 @@
     <footer>
         <p id="copy">&copy;-2026-BOLÃO</p>
     </footer>
+
+    <!-- JS externo -->
+     <script src="./src/js/script.js"></script>
 </body>
 </html>

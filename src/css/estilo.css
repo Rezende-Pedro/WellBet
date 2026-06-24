@@ -22,12 +22,12 @@ header{
     display: flex;
     background-color: var(--color-1);
     align-items: center;
-    padding: 25px;
+    Padding: 0px 5% ;  
     height: 90px;
 }
 #logo{
     font-family: 'Righteous', cursive;
-    font-size: 36px;
+    font-size: 40px;
     color: black;
 }
 
@@ -35,7 +35,6 @@ header{
 #content{
     padding: 0px 5% ;   
     flex:1;
-    
 }
 
 h2{
